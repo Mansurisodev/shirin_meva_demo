@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 
 import '../../../../assets/utils/colors.dart';
-import 'big_text_widget.dart';
+import '../../../home/presentations/widgets/big_text_widget.dart';
 
-class PopularAnnouncements extends StatelessWidget {
-  String image;
-  String bigText;
-  String smalltext;
-  String nameText;
+class CommentConatiner extends StatelessWidget {
+  String image1;
+  String image2;
+  String text1;
+  String text2;
+  String text3;
   // String smalText;
 
-  PopularAnnouncements({
+  CommentConatiner({
     super.key,
-    required this.image,
-    required this.bigText,
-    required this.smalltext,
-    required this.nameText,
+    required this.image1,
+    required this.image2,
+    required this.text1,
+    required this.text2,
+    required this.text3,
     // required this.smalText,
   });
 
@@ -26,7 +28,7 @@ class PopularAnnouncements extends StatelessWidget {
         Positioned(
           child: Container(
             margin: EdgeInsets.only(left: 20, right: 20),
-            width: 318.0,
+            // width: 318.0,
             height: 130.0,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
@@ -57,7 +59,7 @@ class PopularAnnouncements extends StatelessWidget {
               IconButton(
                 onPressed: () {},
                 icon: Image(
-                  image: AssetImage("lib/assets/images/logo/ok.png"),
+                  image: AssetImage(image1),
                 ),
               ),
               Container(child: BigText(text: "Мевалар ", size: 14, color: AppColors.mainGreenColor)),
@@ -68,7 +70,7 @@ class PopularAnnouncements extends StatelessWidget {
           left: 220,
           top: 10,
           child: BigText(
-            text: smalltext,
+            text: text1,
             size: 10,
           ),
         ),
@@ -82,10 +84,10 @@ class PopularAnnouncements extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 10,
-                    backgroundImage: AssetImage(image),
+                    backgroundImage: AssetImage(image2),
                   ),
                   SizedBox(width: 10),
-                  Container(child: BigText(text: nameText, size: 14)),
+                  Container(child: BigText(text: text2, size: 14)),
                 ],
               ),
               // SmallText(text: smalText),
@@ -96,7 +98,7 @@ class PopularAnnouncements extends StatelessWidget {
           top: 47,
           left: 24,
           right: 23,
-          child: BigText(text: bigText, size: 14),
+          child: BigText(text: text3, size: 14),
         ),
         Positioned(
           left: 300,

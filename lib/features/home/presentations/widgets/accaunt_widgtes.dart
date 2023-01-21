@@ -13,11 +13,11 @@ class AccountWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: Dimensions.width20, top: Dimensions.width20, bottom: Dimensions.width20),
+      padding: EdgeInsets.only(left: 20, top: 20, bottom: 20),
       child: Row(
         children: [
           appIcon,
-          SizedBox(width: Dimensions.width20),
+          SizedBox(width: 20),
           bigText,
         ],
       ),

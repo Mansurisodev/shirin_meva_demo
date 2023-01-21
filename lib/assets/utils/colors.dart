@@ -19,6 +19,7 @@ class AppColors {
   static final Color mainGreenColor = const Color(0xFF8FDA38);
   static final Color searchCOlor = const Color(0xFFF7F7F7);
 
+  static final Color lateGreenColor = const Color(0xFFA8EE4A);
 
 
 
@@ -31,4 +32,8 @@ class BanneColor {
   static final Color twoBannerColor = const Color(0xFFF7F7F7);
   static final Color threBannerColor = const Color(0xFFF7F7F7);
   static final Color fiveBannerColor = const Color(0xFFF7F7F7);
+  static final Color whiteSearchButton = const Color(0xFFF7F7F7);
+  static final Color mainGreyWhiteColor = const Color(0xFF1E1E1E);
+
+
 }

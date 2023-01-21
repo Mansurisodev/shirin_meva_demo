@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../../../../assets/utils/dimensions.dart';
 
-class BigText extends StatelessWidget {
+class BoldText extends StatelessWidget {
   Color? color;
   final String text;
   double size;
   TextOverflow overflow;
 
-  BigText({
+  BoldText({
     Key? key,
     this.color = const Color(0xFF332d2b),
     required this.text,
@@ -26,7 +26,7 @@ class BigText extends StatelessWidget {
         fontFamily: 'SFProText',
         fontSize: size == 0 ? 20 : size,
         color: color,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w800,
       ),
     );
   }

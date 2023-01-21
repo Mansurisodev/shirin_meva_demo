@@ -1,6 +1,8 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shirin_meva_demo_ui/features/cart/presentations/pages/cart_page.dart.dart';
+import 'package:shirin_meva_demo_ui/features/search/presentation/pages/search_page.dart';
 
 import '../../../../assets/utils/colors.dart';
 import '../../../../assets/utils/dimensions.dart';
@@ -10,6 +12,7 @@ import '../widgets/catagory_container_widgets.dart';
 import '../widgets/icons_catagory_widget.dart';
 import '../widgets/small_text_widget.dart';
 import '../widgets/top_catagory_widget.dart';
+import 'home_page.dart';
 
 
 class FoodPageBody extends StatefulWidget {
@@ -23,7 +26,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   PageController pageController = PageController(viewportFraction: 0.95);
   var _currPageValue = 0.0;
   var _scaleFactor = 0.8;
-  double _height = Dimensions.pageViewContainer;
+  // double _height = ;
 
   @override
   void initState() {
@@ -151,8 +154,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         SizedBox(height: 20),
         //Company container list horizontal
         Container(
-          height: 300,
-          // color: Colors.red,
+          height: 350,
           width: double.infinity,
           child: ListView(
             scrollDirection: Axis.horizontal,
@@ -185,10 +187,10 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              IconCatagory(image: "lib/assets/images/logo/Vector.png", bigText: "Cабзаводлар "),
-              IconCatagory(image: 'lib/assets/images/logo/Vector.png', bigText: "Мевалар "),
-              IconCatagory(image: "lib/assets/images/logo/Vector.png", bigText: "Узумлар  "),
-              IconCatagory(image: "lib/assets/images/logo/Vector.png", bigText: "Техника "),
+              IconCatagory(image: "lib/assets/images/logo/ok.png", bigText: "Cабзаводлар "),
+              IconCatagory(image: 'lib/assets/images/logo/ok.png', bigText: "Мевалар "),
+              IconCatagory(image: "lib/assets/images/logo/ok.png", bigText: "Узумлар  "),
+              IconCatagory(image: "lib/assets/images/logo/ok.png", bigText: "Техника "),
             ],
           ),
         ),
@@ -232,26 +234,28 @@ class _FoodPageBodyState extends State<FoodPageBody> {
 
   ];
 
-
-
   Widget _buildPageItem(int index) {
-
-
     return Stack(
       children: [
         GestureDetector(
           onTap: () {
+            // Write Tap Code Here.
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CartPage(),
+              ),
+            );
           },
           child: Container(
-            margin: EdgeInsets.only(left: Dimensions.width5, right: Dimensions.width5, top: Dimensions.height20),
+            margin: EdgeInsets.only(left: 5, right:5, top: 5),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(Dimensions.radius15),
+              borderRadius: BorderRadius.circular(15),
               color: index.isEven ? Color(0xFFF2BD0F) : Color(0xFFF2BBF),
               image: DecorationImage(
                 // image: AssetImage(bannerImageName[index]),
                 image: AssetImage('lib/assets/images/banner/banner5.png'),
                 fit: BoxFit.cover,
-
               ),
             ),
           ),

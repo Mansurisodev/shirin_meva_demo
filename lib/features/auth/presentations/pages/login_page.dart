@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:shirin_meva_demo_ui/features/auth/presentations/pages/signup_page.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/pages/home_page.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -24,40 +25,20 @@ class StartState extends State<LoginScreen> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(90)),
                     color: new Color(0xffF5591F),
-                    gradient: LinearGradient(colors: [(new  Color(0xffF5591F)), new Color(0xffF2861E)],
+                    gradient: LinearGradient(colors: [(new  Color(0xFF8FDA38)), new Color(0xFFA8EE4A)],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                     ),
                   ),
-                  child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 50),
-                            child: Image.asset(
-                              "images/app_logo.png",
-                              height: 90,
-                              width: 90,
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 20, top: 20),
-                            alignment: Alignment.bottomRight,
-                            child: Text(
-                              "Login",
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white
-                              ),
-                            ),
-                          )
-                        ],
-                      )
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset("lib/assets/images/Shirin.png"),
+                      SizedBox(width: 10),
+                      Image.asset("lib/assets/images/Meva.png"),
+                    ],
                   ),
                 ),
-
                 Container(
                   alignment: Alignment.center,
                   margin: EdgeInsets.only(left: 20, right: 20, top: 70),
@@ -79,7 +60,7 @@ class StartState extends State<LoginScreen> {
                     decoration: InputDecoration(
                       icon: Icon(
                         Icons.email,
-                        color: Color(0xffF5591F),
+                        color: Colors.grey,
                       ),
                       hintText: "Enter Email",
                       enabledBorder: InputBorder.none,
@@ -87,7 +68,6 @@ class StartState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-
                 Container(
                   alignment: Alignment.center,
                   margin: EdgeInsets.only(left: 20, right: 20, top: 20),
@@ -110,7 +90,7 @@ class StartState extends State<LoginScreen> {
                       focusColor: Color(0xffF5591F),
                       icon: Icon(
                         Icons.vpn_key,
-                        color: Color(0xffF5591F),
+                        color: Colors.grey,
                       ),
                       hintText: "Enter Password",
                       enabledBorder: InputBorder.none,
@@ -128,10 +108,15 @@ class StartState extends State<LoginScreen> {
                     child: Text("Forget Password?"),
                   ),
                 ),
-
                 GestureDetector(
                   onTap: () {
                     // Write Click Listener Code Here.
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomePage(),
+                      ),
+                    );
                   },
                   child: Container(
                     alignment: Alignment.center,
@@ -139,7 +124,7 @@ class StartState extends State<LoginScreen> {
                     padding: EdgeInsets.only(left: 20, right: 20),
                     height: 54,
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [(new  Color(0xffF5591F)), new Color(0xffF2861E)],
+                      gradient: LinearGradient(colors: [(new  Color(0xFF8FDA38)), new Color(0xFFA8EE4A)],
                           begin: Alignment.centerLeft,
                           end: Alignment.centerRight
                       ),
@@ -153,10 +138,21 @@ class StartState extends State<LoginScreen> {
                         ),
                       ],
                     ),
-                    child: Text(
-                      "LOGIN",
-                      style: TextStyle(
-                          color: Colors.white
+                    child: GestureDetector(
+                      onTap: (){
+                        // mansurios@gmail.com
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignUpScreen(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        "LOGIN",
+                        style: TextStyle(
+                            color: Colors.white
+                        ),
                       ),
                     ),
                   ),
@@ -180,7 +176,7 @@ class StartState extends State<LoginScreen> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => SignUpScreen(),
-                              )
+                              ),
                           );
                         },
                       )
@@ -193,3 +189,4 @@ class StartState extends State<LoginScreen> {
     );
   }
 }
+

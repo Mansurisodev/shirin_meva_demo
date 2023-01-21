@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/small_text_widget.dart';
 
 import '../../../../assets/utils/colors.dart';
-import '../../../../assets/utils/dimensions.dart';
 import 'big_text_widget.dart';
 
 class RectangleCatagory extends StatelessWidget {
@@ -23,7 +22,7 @@ class RectangleCatagory extends StatelessWidget {
     return Container(
       height: 237,
       width: 291,
-      margin: EdgeInsets.only(left: Dimensions.width20, right: Dimensions.width20, bottom: Dimensions.height10),
+      margin: EdgeInsets.only(left: 20, right: 20, bottom: 20),
       child: Column(
         children: [
           //images container
@@ -44,6 +43,7 @@ class RectangleCatagory extends StatelessWidget {
           //text container
           Expanded(
             child: Container(
+              height: 150,
               decoration: BoxDecoration(
                 color: Colors.white,
               ),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-
 import '../../../../assets/utils/colors.dart';
+import '../../../search/presentation/pages/search_page.dart';
 import 'main_page.dart';
 
 class HomePage extends StatefulWidget {
+  static const String router = 'router1';
   const HomePage({Key? key}) : super(key: key);
 
   @override
@@ -15,6 +16,7 @@ class _HomePageState extends State<HomePage> {
 
   List pages = [
     MainFoodPage(),
+    SeachPage(),
     MainFoodPage(),
     MainFoodPage(),
     MainFoodPage(),

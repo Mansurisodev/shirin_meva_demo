@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../assets/utils/colors.dart';
-import '../../../../assets/utils/dimensions.dart';
 import '../widgets/big_text_widget.dart';
 import 'home_page_body.dart';
 
@@ -15,16 +14,13 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
-    // print("current height is " + MediaQuery.of(context).size.height.toString());
-
     return Scaffold(
-      backgroundColor: AppColors.mainWhite,
       body: Column(
         children: [
          // Text and icons main appbar
           Container(
             color: AppColors.mainWhite,
-            margin: EdgeInsets.only(right: Dimensions.width10, left: Dimensions.width10, top: Dimensions.height45),
+            margin: EdgeInsets.only(right: 10, left: 10, top: 45),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -58,8 +54,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                         image: AssetImage('lib/assets/images/icons/search@2x.png'),
                         // fit: BoxFit.cover,
                         color: AppColors.greyColor1,
-                        height: Dimensions.height20,
-                        width: Dimensions.width20,
+                        height: 20,
+                        width: 20,
                       ),
                       onPressed: () {},
                     ),
@@ -68,8 +64,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                         image: AssetImage('lib/assets/images/icons/notification.png'),
                         // fit: BoxFit.cover,
                         color: AppColors.greyColor1,
-                        height: Dimensions.height20,
-                        width: Dimensions.width20,
+                        height: 20,
+                        width: 20,
                       ),
                       onPressed: () {},
                     ),
