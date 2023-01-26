@@ -1,8 +1,19 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
+import 'package:shirin_meva_demo_ui/assets/constants/images.dart';
+import 'package:shirin_meva_demo_ui/features/cart/presentations/pages/cart_page.dart.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/app_bar_widget.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/app_column_widget.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/banner_widgets.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/big_text_widget.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/catagory_container_widgets.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/fruit_widget.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/horizontal_company_list_widget.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/horizontal_recomendation_widget.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/popular_company_widget.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/popular_encoming_widget.dart';
 
-import '../../../../assets/utils/colors.dart';
-import '../widgets/big_text_widget.dart';
-import 'home_page_body.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({Key? key}) : super(key: key);
@@ -12,75 +23,44 @@ class MainFoodPage extends StatefulWidget {
 }
 
 class _MainFoodPageState extends State<MainFoodPage> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: white,
       body: Column(
         children: [
-         // Text and icons main appbar
-          Container(
-            color: AppColors.mainWhite,
-            margin: EdgeInsets.only(right: 10, left: 10, top: 45),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () {},
-                      child: CircleAvatar(
-                        backgroundColor: AppColors.mainWhite,
-                        child: Image(
-                          height: 28.0,
-                          width: 28.0,
-                          image: AssetImage("lib/assets/images/elips1.png"),
-                          fit: BoxFit.cover,
-                          // backgroundImage: AssetImage(),
-                        ),
-                      ),
-                    ),
-                    // appBarText
-                    Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: BigText(text: "Кучкоров Мансур ", color: AppColors.darkBigText, size: 17),
-                    ),
-                  ],
-                ),
-                // AppbarText
-                Row(
-                  children: [
-                    IconButton(
-                      icon: Image(
-                        image: AssetImage('lib/assets/images/icons/search@2x.png'),
-                        // fit: BoxFit.cover,
-                        color: AppColors.greyColor1,
-                        height: 20,
-                        width: 20,
-                      ),
-                      onPressed: () {},
-                    ),
-                    IconButton(
-                      icon: Image(
-                        image: AssetImage('lib/assets/images/icons/notification.png'),
-                        // fit: BoxFit.cover,
-                        color: AppColors.greyColor1,
-                        height: 20,
-                        width: 20,
-                      ),
-                      onPressed: () {},
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+          AppBarWidget(),
           Expanded(
             child: SingleChildScrollView(
-              child: FoodPageBody(),
+              child: Column(
+                children: [
+                  BannerWidget(),
+                  SizedBox(height: 20),
+                  PopularCompanyTextWidget(companyName: "Машҳур компаниялар", text: "Барчаси"),
+                  SizedBox(height: 20),
+                  HorizonTalCompanyList(),
+                  SizedBox(height: 20),
+                  PopularCompanyTextWidget(companyName: "Елонлар катагориясы ", text: "Барчаси"),
+                  SizedBox(height: 20),
+                  FruitWidget(),
+                  SizedBox(height: 20),
+                  PopularCompanyTextWidget(companyName: "Тавсия этилган", text: "Барчаси"),
+                  SizedBox(height: 20),
+                  RecomendationHorizontalWidget(),
+                  SizedBox(height: 20,),
+                  PopularCompanyTextWidget(companyName: "Машхур элонлар", text: "Барчаси"),
+                  SizedBox(height: 10),
+                  ListAnoounnce(),
+
+                ],
+              ),
             ),
           ),
         ],
       ),
     );
   }
+
 }

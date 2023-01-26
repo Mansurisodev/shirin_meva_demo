@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
+import 'package:shirin_meva_demo_ui/assets/constants/images.dart';
 
-import '../../../../assets/utils/colors.dart';
 import 'big_text_widget.dart';
 
 class PopularAnnouncements extends StatelessWidget {
@@ -25,7 +26,7 @@ class PopularAnnouncements extends StatelessWidget {
       children: [
         Positioned(
           child: Container(
-            margin: EdgeInsets.only(left: 20, right: 20),
+            margin: EdgeInsets.only(left: 20),
             width: 318.0,
             height: 130.0,
             decoration: BoxDecoration(
@@ -37,7 +38,7 @@ class PopularAnnouncements extends StatelessWidget {
                   offset: Offset(5, 5),
                 ),
                 BoxShadow(
-                  color: Colors.white,
+                  color: white,
                   offset: Offset(-5, 0),
                 ),
                 BoxShadow(
@@ -57,10 +58,10 @@ class PopularAnnouncements extends StatelessWidget {
               IconButton(
                 onPressed: () {},
                 icon: Image(
-                  image: AssetImage("lib/assets/images/logo/ok.png"),
+                  image: AssetImage(AppImage.fruit3),
                 ),
               ),
-              Container(child: BigText(text: "Мевалар ", size: 14, color: AppColors.mainGreenColor)),
+              Container(child: BigText(text: "Мевалар ", size: 14, color: green1)),
             ],
           ),
         ),

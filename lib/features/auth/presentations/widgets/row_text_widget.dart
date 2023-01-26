@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
 
 class RowTextWidget extends StatelessWidget {
   String text1;
@@ -10,12 +11,15 @@ class RowTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(text1, style: TextStyle(fontSize: 14)),
-        Text(text2, style: TextStyle(fontSize: 14, color: Color(0xFF52A83A))),
-      ],
+    return Container(
+      margin: EdgeInsets.only(left: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(text1, style: TextStyle(fontSize: 14,color: grey2)),
+          Text(text2, style: TextStyle(fontSize: 14, color: green1)),
+        ],
+      ),
     );
   }
 }

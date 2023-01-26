@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 class LocationWidget extends StatelessWidget {
   String image1;
-  String image2;
+  // String image2;
   String text;
    LocationWidget({Key? key,
     required this.image1,
-    required this.image2,
+    // required this.image2,
     required this.text,
   }) : super(key: key);
 
@@ -51,7 +51,7 @@ class LocationWidget extends StatelessWidget {
               margin: EdgeInsets.only(left: 10),
               child: Row(
                 children: [
-                  Image.asset(image2, width: 16, height: 16,),
+                  Icon(Icons.location_on),
                   SizedBox(width: 4),
                   Text(text),
                 ],

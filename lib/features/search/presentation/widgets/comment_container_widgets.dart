@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
+import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/big_text_widget.dart';
 
-import '../../../../assets/utils/colors.dart';
-import '../../../home/presentations/widgets/big_text_widget.dart';
 
 class CommentConatiner extends StatelessWidget {
   String image1;
@@ -62,7 +62,7 @@ class CommentConatiner extends StatelessWidget {
                   image: AssetImage(image1),
                 ),
               ),
-              Container(child: BigText(text: "Мевалар ", size: 14, color: AppColors.mainGreenColor)),
+              Container(child: BigText(text: "Мевалар ", size: 14, color: grey1)),
             ],
           ),
         ),

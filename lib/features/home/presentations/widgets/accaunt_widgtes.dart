@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
 
-import '../../../../assets/utils/dimensions.dart';
 import 'app_icon_widgets.dart';
 import 'big_text_widget.dart';
 
@@ -22,12 +22,12 @@ class AccountWidget extends StatelessWidget {
         ],
       ),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: white,
         boxShadow: [
           BoxShadow(
             blurRadius: 1,
             offset: Offset(0, 2),
-            color: Colors.grey.withOpacity(0.2),
+            color: grey1.withOpacity(0.2),
           ),
         ],
       ),

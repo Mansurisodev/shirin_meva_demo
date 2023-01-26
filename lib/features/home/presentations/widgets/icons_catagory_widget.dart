@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shirin_meva_demo_ui/assets/utils/colors.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
 
 import 'big_text_widget.dart';
 
@@ -26,16 +25,16 @@ class IconCatagory extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Color(0xFFe8e8e8),
+            color: white,
             blurRadius: 5.0,
             offset: Offset(5, 5),
           ),
           BoxShadow(
-            color: Colors.white,
+            color: white,
             offset: Offset(-5, 0),
           ),
           BoxShadow(
-            color: Colors.white,
+            color: white,
             offset: Offset(5, 0),
           ),
         ],
@@ -47,7 +46,7 @@ class IconCatagory extends StatelessWidget {
             SizedBox(height: 5),
             // SvgPicture.asset(image),
             CircleAvatar(backgroundImage: AssetImage(image),
-            backgroundColor: AppColors.mainWhite,),
+            backgroundColor: white,),
             SizedBox(height: 5),
             BigText(text: bigText, size: 12),
             SizedBox(height: 5),

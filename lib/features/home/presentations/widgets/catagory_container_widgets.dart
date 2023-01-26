@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
+import 'package:shirin_meva_demo_ui/assets/constants/images.dart';
 import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/small_text_widget.dart';
 
 import 'big_text_widget.dart';
@@ -23,27 +25,33 @@ class CatagoriyWidget extends StatelessWidget {
       height: 119.0,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
+          color: white,
         boxShadow: [
           BoxShadow(
-            color: Color(0xFFe8e8e8),
-            blurRadius: 5.0,
-            offset: Offset(5, 5),
+            blurRadius: 1,
+            offset: Offset(1, 0),
+            color: white.withOpacity(0.2),
           ),
           BoxShadow(
-            color: Colors.white,
-            offset: Offset(-5, 0),
+            offset: Offset(0, 1),
+            color: white.withOpacity(0.2),
           ),
           BoxShadow(
-            color: Colors.white,
-            offset: Offset(5, 0),
+            blurRadius: 1,
+            offset: Offset(-1, 0),
+            color: white..withOpacity(0.2),
+          ),
+          BoxShadow(
+            blurRadius: 1,
+            offset: Offset(0, -1),
+            color: white..withOpacity(0.2),
           ),
         ],
       ),
-      child: InkWell(
-        onTap: () {},
+      child: Container(
         child: Column(
           children: [
-            SizedBox(height: 5),
+            SizedBox(height: 16),
             CircleAvatar(backgroundImage: AssetImage(image)),
             SizedBox(height: 5),
             BigText(text: bigText, size: 12),

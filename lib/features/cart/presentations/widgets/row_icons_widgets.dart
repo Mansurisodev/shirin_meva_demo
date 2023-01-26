@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
+import 'package:shirin_meva_demo_ui/assets/constants/icons.dart';
 
 class RowIconWidget extends StatelessWidget {
-  IconData icon1;
-  IconData icon2;
-
   RowIconWidget({Key? key,
-    required this.icon1,
-    required this.icon2,}) : super(key: key);
+    }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,19 +18,20 @@ class RowIconWidget extends StatelessWidget {
           margin: EdgeInsets.only(right: 16),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-            color: Color(0xFF45535B),
+            color: grey2,
           ),
-          child: Icon(icon1, size: 24),
+          child: SvgPicture.asset(AppIcons.back_icon,color: white,width: 20,height: 20,)
         ),
         Container(
           height: 36,
           width: 36,
-          margin: EdgeInsets.only(right: 16),
+            margin: EdgeInsets.only(right: 16),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-            color: Color(0xFF45535B),
+            color: grey2,
           ),
-          child: Icon(icon2, size: 24),
+            child: SvgPicture.asset(AppIcons.star_icon2,color: white,width: 12,height: 12,)
+
         ),
       ],
     );

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../assets/utils/dimensions.dart';
 
 class BigText extends StatelessWidget {
   Color? color;

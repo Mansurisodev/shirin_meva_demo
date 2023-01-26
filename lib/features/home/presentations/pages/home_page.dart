@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../assets/utils/colors.dart';
-import '../../../search/presentation/pages/search_page.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
+import 'package:shirin_meva_demo_ui/features/search/presentation/pages/search_page.dart';
 import 'main_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -33,8 +33,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: AppColors.mainGreenColor,
-        unselectedItemColor: AppColors.greyColor1,
+        selectedItemColor: green1,
+        unselectedItemColor: green2,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         currentIndex: _selectedIndex,

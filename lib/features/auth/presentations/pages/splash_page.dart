@@ -1,9 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:shirin_meva_demo_ui/assets/constants/images.dart';
 import 'package:shirin_meva_demo_ui/features/auth/presentations/pages/auth_page.dart';
-
-import 'login_page.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -19,7 +18,7 @@ class StartState extends State<SplashScreen> {
   }
 
   startTime() async {
-    var duration = Duration(seconds: 5);
+    var duration = Duration(seconds: 1);
     return new Timer(duration, route);
   }
 
@@ -48,13 +47,13 @@ class StartState extends State<SplashScreen> {
           ),
           Positioned(
             child: Center(
-              child: Image.asset("lib/assets/images/logo/auth/logo.png"),
+              child: Image.asset(AppImage.company_logo1),
             ),
           ),
           Positioned(
             child: Center(
               child: Image.asset(
-                "lib/assets/images/logo/auth/vector_logo.png",
+                AppImage.company_logo2,
                 height: 900,
                 fit: BoxFit.cover,
               ),
