@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
 
 
 class BoldText extends StatelessWidget {
@@ -9,7 +10,7 @@ class BoldText extends StatelessWidget {
 
   BoldText({
     Key? key,
-    this.color = const Color(0xFF332d2b),
+    this.color = boldTextColor,
     required this.text,
     this.size = 0,
     this.overflow = TextOverflow.ellipsis,
@@ -25,7 +26,7 @@ class BoldText extends StatelessWidget {
         fontFamily: 'SFProText',
         fontSize: size == 0 ? 20 : size,
         color: color,
-        fontWeight: FontWeight.w800,
+        fontWeight: FontWeight.w600,
       ),
     );
   }

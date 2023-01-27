@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
 import 'package:shirin_meva_demo_ui/features/home/presentations/pages/home_page.dart';
 
 class LogInButton extends StatelessWidget {
@@ -22,15 +23,12 @@ class LogInButton extends StatelessWidget {
         height: 45,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          gradient: LinearGradient(
-              colors: [(new Color(0xFF52A83A)), new Color(0xFF89D538)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter),
+          gradient: splashLinearGradient,
         ),
         child: Center(
           child: Text(
             "Кириш",
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: TextStyle(color:white, fontSize: 16),
           ),
         ),
       ),

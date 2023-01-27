@@ -42,7 +42,7 @@ class PopularAnnouncements extends StatelessWidget {
                   offset: Offset(-5, 0),
                 ),
                 BoxShadow(
-                  color: Colors.white,
+                  color: white,
                   offset: Offset(5, 0),
                 ),
               ],

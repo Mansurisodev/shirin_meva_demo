@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
 
 class SmallText extends StatelessWidget {
   Color? color;
@@ -8,7 +9,7 @@ class SmallText extends StatelessWidget {
 
   SmallText({
     Key? key,
-    this.color = const Color(0xFFccc7c5),
+    this.color = grey1,
     required this.text,
     this.size = 12,
     this.height = 1.2,
@@ -16,14 +17,8 @@ class SmallText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(
-        fontFamily: 'SFProText',
-        fontSize: size,
-        color: color,
-        height: height,
-      ),
-    );
+    return  Container(
+        margin: EdgeInsets.only(right: 16, top: 16,left: 16),
+        child: Text(text),);
   }
 }

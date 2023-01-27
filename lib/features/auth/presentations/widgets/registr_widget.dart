@@ -27,13 +27,13 @@ class AppTextFiled extends StatelessWidget {
             margin: EdgeInsets.only(left: 10, right: 10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: Colors.white,
+              color: white,
               boxShadow: [
                 BoxShadow(
                   blurRadius: 3,
                   spreadRadius: 1,
                   offset: Offset(1, 1),
-                  color: Colors.grey.withOpacity(0.2),
+                  color: grey1.withOpacity(0.2),
                 ),
               ],
             ),
@@ -74,14 +74,14 @@ class AppTextFiled extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide(
                             width: 1.0,
-                            color: Colors.white,
+                            color: white,
                           ),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
                             width: 1.0,
-                            color: Colors.white,
+                            color: white,
                           ),
                         ),
                         border: OutlineInputBorder(
@@ -100,13 +100,13 @@ class AppTextFiled extends StatelessWidget {
             margin: EdgeInsets.only(left: 10, right: 10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: Colors.white,
+              color: white,
               boxShadow: [
                 BoxShadow(
                   blurRadius: 3,
                   spreadRadius: 1,
                   offset: Offset(1, 1),
-                  color: Colors.grey.withOpacity(0.2),
+                  color: grey1.withOpacity(0.2),
                 ),
               ],
             ),
@@ -137,14 +137,14 @@ class AppTextFiled extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide(
                             width: 1.0,
-                            color: Colors.white,
+                            color: white,
                           ),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
                             width: 1.0,
-                            color: Colors.white,
+                            color:white,
                           ),
                         ),
                         border: OutlineInputBorder(

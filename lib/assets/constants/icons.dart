@@ -20,9 +20,15 @@ class AppIcons {
   static const String search_icon = 'assets/icons/search_icon.svg';
   static const String notification_icon = 'assets/icons/notification.svg';
   static const String setting_icon = 'assets/icons/setting_icon.svg';
-
   static const String star_icon1 = 'assets/icons/star_icon1.svg';
   static const String star_icon2 = 'assets/icons/star_icon2.svg';
+  static const String tick_circle = 'assets/icons/tick_circle.svg';
+
+  static const String location = 'assets/icons/location.svg';
+
+
+
+
 
 
 

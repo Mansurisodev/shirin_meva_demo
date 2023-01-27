@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/small_text_widget.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
 
 class LogoAndTextWidget extends StatelessWidget {
   String text;
@@ -14,9 +14,9 @@ class LogoAndTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(logo,width: 19.59, height: 15.95,),
+        Image.asset(logo,width: 24, height: 24,),
         SizedBox(width: 8),
-        SmallText(text: text,size: 22.4,color: Color(0xFF439C3B),),
+        Text(text, style: TextStyle(color: green1, fontSize: 22.4, fontWeight: FontWeight.w600,),),
       ],
     );
   }

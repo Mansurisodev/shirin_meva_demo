@@ -11,7 +11,6 @@ import 'package:shirin_meva_demo_ui/features/auth/presentations/widgets/registr_
 import 'package:shirin_meva_demo_ui/features/auth/presentations/widgets/row_text_widget.dart';
 import 'package:shirin_meva_demo_ui/features/auth/presentations/widgets/small_text_widget.dart';
 import 'package:shirin_meva_demo_ui/features/auth/presentations/widgets/tab_bar_widget.dart';
-import 'package:shirin_meva_demo_ui/features/home/presentations/pages/home_page.dart';
 
 
 class AuthPage extends StatefulWidget {

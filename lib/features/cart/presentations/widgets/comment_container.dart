@@ -26,12 +26,13 @@ class CommentContainer extends StatelessWidget {
       margin: EdgeInsets.only(right: 10, left: 10, top: 10, bottom: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: Colors.white,
+        color: grey4,
         boxShadow: [
           BoxShadow(
             blurRadius: 10,
             offset: Offset(0, 2),
-            color: Colors.grey.withOpacity(0.2),
+            color: grey1.withOpacity(0.2),
+            // color: Color(0xFFB8B8B8),
           ),
         ],
       ),

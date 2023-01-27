@@ -52,16 +52,16 @@ class _BannerWidgetState extends State<BannerWidget> {
         ),
         boxShadow: [
           BoxShadow(
-            color: Color(0xFFe8e8e8),
+            color: grey4,
             blurRadius: 5.0,
             offset: Offset(5, 5),
           ),
           BoxShadow(
-            color: Colors.white,
+            color: white,
             offset: Offset(-5, 0),
           ),
           BoxShadow(
-            color: Colors.white,
+            color: white,
             offset: Offset(5, 0),
           ),
         ],
@@ -86,10 +86,10 @@ class _BannerWidgetState extends State<BannerWidget> {
             dotsCount: 4,
             position: _currPageValue,
             decorator: DotsDecorator(
-              activeColor: Color(0xFFFFFFFF),
-              size: const Size.square(5.0),
+              activeColor: grey3,
+              size: const Size.square(5.5),
               activeSize: Size(18.0, 3.0),
-              color: Colors.grey, // Inactive color
+              color: grey2, // Inactive color
               activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             ),
           ),
@@ -117,9 +117,8 @@ class _BannerWidgetState extends State<BannerWidget> {
             margin: EdgeInsets.only(left: 5, right:5, top: 5),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: index.isEven ? Color(0xFFF2BD0F) : Color(0xFFF2BBF),
+              color: index.isEven ? starColor : mainDark,
               image: DecorationImage(
-                // image: AssetImage(bannerImageName[index]),
                 image: AssetImage(banner[index]),
                 fit: BoxFit.cover,
               ),

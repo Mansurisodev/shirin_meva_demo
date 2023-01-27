@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
+import 'package:shirin_meva_demo_ui/assets/constants/icons.dart';
 import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/big_text_widget.dart';
 import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/small_text_widget.dart';
 
@@ -24,24 +27,24 @@ class RowTwoContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: white,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
             blurRadius: 1,
             offset: Offset(1, 1),
-            color: Color(0xFFE2E2E2),
+            color: grey4,
           ),
           BoxShadow(
             blurRadius: 1,
             offset: Offset(-1, 1),
-            color: Color(0xFFE2E2E2),
+            color: grey4,
 
           ),
           BoxShadow(
             blurRadius: 1,
             offset: Offset(1, -1),
-            color: Color(0xFFE2E2E2),
+            color: grey4,
           ),
         ],
       ),
@@ -59,12 +62,12 @@ class RowTwoContainer extends StatelessWidget {
                 Row(
                   children: [
                     CircleAvatar(
-                      radius: 10,
-                      backgroundColor: Color(0xFF8FDA38),
-                      child: Image.asset(image,color: Colors.white,),
+                      radius: 9,
+                      backgroundColor: green3,
+                      child: SvgPicture.asset(AppIcons.tick_circle,width: 7.66,height: 5.78,color: white),
                     ),
                     SizedBox(width: 5),
-                    BigText(text: leftText2,size: 14),
+                    Text(leftText2, style: TextStyle(color: mainDark, fontSize: 14, fontWeight: FontWeight.w700),),
 
                   ],
                 ),
@@ -74,7 +77,7 @@ class RowTwoContainer extends StatelessWidget {
           Container(
             width: 1,
             height: 44,
-            color: Color(0xFFE2E2E2),
+            color: grey4,
           ),
           Container(
             margin: EdgeInsets.only(top: 22,right: 30,bottom: 19),
@@ -85,10 +88,9 @@ class RowTwoContainer extends StatelessWidget {
                 SizedBox(height: 5),
                 Row(
                   children: [
-                    BigText(text: rightText2,size: 14),
+                    Text(rightText2, style: TextStyle(color: mainDark, fontSize: 14, fontWeight: FontWeight.w700),),
                     SizedBox(width: 4),
                     SmallText(text: rightText3),
-
                   ],
                 ),
               ],

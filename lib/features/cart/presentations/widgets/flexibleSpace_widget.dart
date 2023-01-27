@@ -7,9 +7,8 @@ class FlexibleSpaceWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlexibleSpaceBar(
-      background: Image.asset(
-        AppImage.background_image10,
-        width: double.maxFinite,
+      background: Image(
+        image: AssetImage(AppImage.background_image8),
         fit: BoxFit.cover,
       ),
     );

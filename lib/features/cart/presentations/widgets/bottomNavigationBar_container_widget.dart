@@ -11,24 +11,33 @@ class BottomNavigationBarContainerWidget extends StatelessWidget {
     return Container(
       height: 120,
       decoration: BoxDecoration(
-        color: Colors.white,
+        // color:white,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
+        color: white,
         boxShadow: [
           BoxShadow(
-            color: Color(0xFFe8e8e8),
-            blurRadius: 5.0,
-            offset: Offset(5, 5),
+            blurRadius: 1,
+            offset: Offset(1, 1),
+            color: grey4,
           ),
           BoxShadow(
-            color: Colors.white,
-            offset: Offset(-5, 0),
+            blurRadius: 1,
+            offset: Offset(-1, 1),
+            color: grey4,
+
           ),
           BoxShadow(
-            color: Colors.white,
-            offset: Offset(5, 0),
+            blurRadius: 1,
+            offset: Offset(1, -1),
+            color: grey4,
+          ),
+          BoxShadow(
+            blurRadius: 12,
+            offset: Offset(0, 10),
+            color: grey4,
           ),
         ],
       ),
@@ -40,13 +49,9 @@ class BottomNavigationBarContainerWidget extends StatelessWidget {
             margin: EdgeInsets.only(right: 20, left: 20),
             height: 60,
             decoration: BoxDecoration(
-              color: Colors.green,
+              color: green1,
               borderRadius: BorderRadius.circular(20),
-              gradient: LinearGradient(
-                colors: [(new Color(0xFF8FDA38)), new Color(0xFF439C3B)],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
+              gradient: splashLinearGradient,
             ),
 
             child: Row(

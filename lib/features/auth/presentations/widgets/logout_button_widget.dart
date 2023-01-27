@@ -18,21 +18,21 @@ class SigUpButtonWidget extends StatelessWidget {
             BoxShadow(
               blurRadius: 1,
               offset: Offset(1, 0),
-              color: mainDark.withOpacity(0.2),
+              color: grey2.withOpacity(0.2),
             ),
             BoxShadow(
               offset: Offset(0, 1),
-              color: Colors.black.withOpacity(0.2),
+              color: grey4..withOpacity(0.2),
             ),
             BoxShadow(
               blurRadius: 1,
               offset: Offset(-1, 0),
-              color: mainDark..withOpacity(0.2),
+              color: grey4..withOpacity(0.2),
             ),
             BoxShadow(
               blurRadius: 1,
               offset: Offset(0, -1),
-              color: mainDark..withOpacity(0.2),
+              color: grey4..withOpacity(0.2),
             ),
           ],
         ),

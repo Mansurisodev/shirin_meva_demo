@@ -1,6 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
 import 'package:shirin_meva_demo_ui/assets/constants/images.dart';
 import 'package:shirin_meva_demo_ui/features/auth/presentations/pages/auth_page.dart';
 
@@ -38,11 +38,8 @@ class StartState extends State<SplashScreen> {
         children: [
           Container(
             decoration: BoxDecoration(
-              color: new Color(0xFF52A83A),
-              gradient: LinearGradient(
-                  colors: [(new Color(0xFF52A83A)), new Color(0xFF89D538)],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter),
+              color: green1,
+              gradient: splashLinearGradient,
             ),
           ),
           Positioned(
@@ -65,7 +62,7 @@ class StartState extends State<SplashScreen> {
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: CircularProgressIndicator.adaptive(
-                  backgroundColor: Colors.white,
+                  backgroundColor: white,
                 ),
               ),
             ),

@@ -1,36 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
+import 'package:shirin_meva_demo_ui/assets/constants/icons.dart';
 
 
 class LocationWidget extends StatelessWidget {
   String image1;
-  // String image2;
   String text;
    LocationWidget({Key? key,
     required this.image1,
-    // required this.image2,
     required this.text,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-
+      margin: EdgeInsets.only(top: 10),
       height: 196,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
+        color: white,
         boxShadow: [
           BoxShadow(
-            color: Color(0xFFe8e8e8),
-            blurRadius: 5.0,
-            offset: Offset(5, 5),
+            blurRadius: 1,
+            offset: Offset(1, 1),
+            color: grey4,
           ),
           BoxShadow(
-            color: Colors.white,
-            offset: Offset(-5, 0),
+            blurRadius: 1,
+            offset: Offset(-1, 1),
+            color: grey4,
+
           ),
           BoxShadow(
-            color: Colors.white,
-            offset: Offset(5, 0),
+            blurRadius: 1,
+            offset: Offset(1, -1),
+            color: grey4,
+          ),
+          BoxShadow(
+            blurRadius: 12,
+            offset: Offset(0, 10),
+            color: grey4,
           ),
         ],
       ),
@@ -51,7 +61,7 @@ class LocationWidget extends StatelessWidget {
               margin: EdgeInsets.only(left: 10),
               child: Row(
                 children: [
-                  Icon(Icons.location_on),
+                  SvgPicture.asset(AppIcons.location, width: 16, height: 16,),
                   SizedBox(width: 4),
                   Text(text),
                 ],
