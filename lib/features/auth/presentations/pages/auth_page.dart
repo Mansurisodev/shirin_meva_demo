@@ -11,6 +11,7 @@ import 'package:shirin_meva_demo_ui/features/auth/presentations/widgets/registr_
 import 'package:shirin_meva_demo_ui/features/auth/presentations/widgets/row_text_widget.dart';
 import 'package:shirin_meva_demo_ui/features/auth/presentations/widgets/small_text_widget.dart';
 import 'package:shirin_meva_demo_ui/features/auth/presentations/widgets/tab_bar_widget.dart';
+import 'package:shirin_meva_demo_ui/features/auth/presentations/widgets/white_container_widgtes.dart';
 
 
 class AuthPage extends StatefulWidget {
@@ -60,34 +61,24 @@ class _AuthPageState extends State<AuthPage>
             ),
             Expanded(
               flex: 7,
-              child: Container(
-                height: 634,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(24),
-                      topRight: Radius.circular(24)),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      BoldText(text: 'Кириш'),
-                      TabBarWidgets(tabController: tabController),
-                      SmalText(text: 'Телефон рақамингиз'),
-                      AppTextFiled(textEditingController: emailController, hintText: 'Email', icon: AppIcons.call_icon, isObscure: true,),
-                      RowTextWidget(text1: "Паролингиз", text2: "Паролни унутдингизми?"),
-                      AppTextFiled(textEditingController: passwordController, hintText: 'Password', icon: AppIcons.key_icon,isObscure: false,),
-                      CheckBoxWidget(isSelected: false),
-                      LogInButton(),
-                      SizedBox(height: 10),
-                      AndWidget(),
-                      SigUpButtonWidget(),
-                    ],
-                  ),
+              child: MainContainerWidgets(
+                child:
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    BoldText(text: 'Кириш'),
+                    TabBarWidgets(tabController: tabController),
+                    SmalText(text: 'Телефон рақамингиз'),
+                    AppTextFiled(textEditingController: emailController, hintText: 'Email', icon: AppIcons.call_icon, isObscure: true,),
+                    RowTextWidget(text1: "Паролингиз", text2: "Паролни унутдингизми?"),
+                    AppTextFiled(textEditingController: passwordController, hintText: 'Password', icon: AppIcons.key_icon,isObscure: false,),
+                    CheckBoxWidget(isSelected: false),
+                    LogInButton(),
+                    SizedBox(height: 10),
+                    AndWidget(),
+                    SigUpButtonWidget(),
+                  ],
                 ),
               ),
             ),

@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shirin_meva_demo_ui/assets/colors/colors.dart';
 import 'package:shirin_meva_demo_ui/features/auth/presentations/widgets/tab_bar_widget.dart';
-import 'package:shirin_meva_demo_ui/features/cart/presentations/pages/cart_page.dart.dart';
-import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/big_text_widget.dart';
-import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/popular_encoming_widget.dart';
-import 'package:shirin_meva_demo_ui/features/home/presentations/widgets/small_text_widget.dart';
 import 'package:shirin_meva_demo_ui/features/search/presentation/widgets/appBar_container_widget.dart';
-import 'package:shirin_meva_demo_ui/features/search/presentation/widgets/comment_container_widgets.dart';
 import 'package:shirin_meva_demo_ui/features/search/presentation/widgets/horizontal_recomendation_widget.dart';
 import 'package:shirin_meva_demo_ui/features/search/presentation/widgets/popular_encoming_widget.dart';
 import 'package:shirin_meva_demo_ui/features/search/presentation/widgets/row_search_and_setting_widget.dart';
